@@ -43,7 +43,7 @@ void vendor_load_properties()
     string region = GetProperty("ro.boot.hwc", "");
     string hwversion = GetProperty("ro.boot.hwversion", "");
 
-    if (region == "Global_B" && (hwversion == "18.31.0" || 
+    if (region == "Global_B" && (hwversion == "18.31.0" ||
         hwversion == "18.39.0" || hwversion == "19.39.0")) {
         device = "willow";
         model = "Redmi Note 8T";
@@ -109,3 +109,8 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 }
+
+    // SafetyNet workaround
+    property_override("ro.boot.verifiedbootstate", "green");
+    fingerprint = "google/redfin/redfin:11/RQ2A.210305.007/7124944:user/release-keys",
+    description = "redfin-user 11 RQ2A.210305.007 7124944 release-keys",
