@@ -169,6 +169,11 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+# Device-specific Settings
+PRODUCT_PACKAGES += \
+    XiaomiParts \
+    XiaomiDoze
+	
 # Display/Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
@@ -476,7 +481,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
