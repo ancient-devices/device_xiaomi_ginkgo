@@ -7,6 +7,7 @@
 
 # Vendor blobs
 $(call inherit-product, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
+$(call inherit-product, build/make/target/product/gsi_keys.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
