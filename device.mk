@@ -375,6 +375,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     fstab.qcom \
     init.safailnet.rc
+    init.spectrum.rc \
+    init.spectrum.sh
+
 
 # RCS
 PRODUCT_PACKAGES += \
