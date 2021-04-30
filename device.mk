@@ -202,6 +202,9 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# IO cgroups
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.iocgrp.config=1
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
