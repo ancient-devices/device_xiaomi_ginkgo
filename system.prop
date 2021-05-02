@@ -81,3 +81,12 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 
 # brightness
 ro.sf.force_light_brightness=1
+
+#IOP properties
+vendor.iop.enable_uxe=1
+
+#Property to enable perf boosts from System Server
+vendor.perf.gestureflingboost.enable=true
+
+#Property to enable WorkloadClassifier
+vendor.perf.workloadclassifier.enable=true
