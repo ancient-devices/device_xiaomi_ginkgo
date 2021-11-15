@@ -13,6 +13,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
+    NotchBarKiller \
     WillowFrameworkRes
 
 # AID/fs configs
