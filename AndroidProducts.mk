@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/octavi_ginkgo.mk
+    $(LOCAL_DIR)/ancient_ginkgo.mk
 
 COMMON_LUNCH_CHOICES := \
-    octavi_ginkgo-user \
-    octavi_ginkgo-userdebug \
-    octavi_ginkgo-eng
+    ancient_ginkgo-user \
+    ancient_ginkgo-userdebug \
+    ancient_ginkgo-eng
