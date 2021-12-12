@@ -28,6 +28,7 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 ANCIENT_OFFICIAL ?= true
 ANCIENT_GAPPS ?= true
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_USES_BLUR := true
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
