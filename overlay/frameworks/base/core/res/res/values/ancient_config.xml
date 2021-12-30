@@ -40,6 +40,9 @@
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
 
-        <!-- Enable support device gaming profiles -->
+     <!-- Enable support device gaming profiles -->
     <bool name="config_gamingmode_performance">true</bool>
+
+     <!-- Whether to show the Preference for Adaptive connectivity -->
+    <bool name="config_show_adaptive_connectivity">false</bool>
 </resources>
