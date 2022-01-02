@@ -165,6 +165,7 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 
 # Treble
 BOARD_VNDK_VERSION := current
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
