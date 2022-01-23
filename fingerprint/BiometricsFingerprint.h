@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2020 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +18,14 @@
 #ifndef ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 #define ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.ginkgo"
+
 #include <android/log.h>
-#include <hardware/hardware.h>
+#include <cutils/properties.h>
 #include <hardware/fingerprint.h>
+#include <hardware/hardware.h>
+#include <hardware/hw_auth_token.h>
+#include <hidl/HidlTransportSupport.h>
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <inttypes.h>
@@ -27,6 +33,22 @@
 #include <unistd.h>
 
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
+
+namespace aidl {
+namespace google {
+namespace hardware {
+namespace power {
+namespace extension {
+namespace pixel {
+
+class IPowerExt;
+
+} // namespace pixel
+} // namespace extension
+} // namespace power
+} // namespace hardware
+} // namespace google
+} // namespace aidl
 
 namespace android {
 namespace hardware {
@@ -45,6 +67,7 @@ using ::android::hardware::Void;
 using ::android::hardware::hidl_vec;
 using ::android::hardware::hidl_string;
 using ::android::sp;
+using ::android::status_t;
 
 struct BiometricsFingerprint : public IBiometricsFingerprint {
 public:
@@ -70,6 +93,11 @@ public:
     Return<void> onFingerUp() override;
 private:
     static fingerprint_device_t* openHal();
+    int32_t connectPowerHalExt();
+    int32_t checkPowerHalExtBoostSupport(const std::string &boost);
+    int32_t sendPowerHalExtBoost(const std::string &boost, int32_t durationMs);
+    int32_t isBoostHintSupported();
+    int32_t sendAuthenticatedBoostHint();
     static void notify(const fingerprint_msg_t *msg); /* Static callback for legacy HAL implementation */
     static Return<RequestStatus> ErrorFilter(int32_t error);
     static FingerprintError VendorErrorFilter(int32_t error, int32_t* vendorCode);
@@ -79,6 +107,9 @@ private:
     std::mutex mClientCallbackMutex;
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t *mDevice;
+    bool mBoostHintIsSupported;
+    bool mBoostHintSupportIsChecked;
+    std::shared_ptr<aidl::google::hardware::power::extension::pixel::IPowerExt> mPowerHalExtAidl;
 };
 
 }  // namespace implementation

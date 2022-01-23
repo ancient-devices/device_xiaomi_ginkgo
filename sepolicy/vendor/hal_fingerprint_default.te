@@ -17,3 +17,7 @@ hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
 
 # Ignore all logging requests
 dontaudit hal_fingerprint storage_file:dir search;
+get_prop(system_server, vendor_fp_prop);
+
+# Allow fp HAL to send hint
+hal_client_domain(hal_fingerprint_default, hal_power)
