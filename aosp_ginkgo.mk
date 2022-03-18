@@ -23,16 +23,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common ArrowOS stuff
+# Inherit some common Aosp stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Feature Flags
+IS_PHONE := true
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+PPUI_MAINTAINER := erwinabs
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Device identifier
-PRODUCT_NAME := arrow_ginkgo
+PRODUCT_NAME := aosp_ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8/8T
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-DEVICE_MAINTAINER := Adithya (ghostrider_reborn)
