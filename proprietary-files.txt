@@ -2083,6 +2083,9 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so|db909e4fe10379283d09b0983ba60f849f1
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|2ac3b639c06d085b1ce88ede7462be9a52a726f2
 
+# Ril (Radio-Ims)
+vendor/lib64/deviceInfoServiceModule.so|64115b051b3be38781872b4d645056bd62b8097a
+
 # Sensors HAL
 vendor/lib/sensors.ssc.so
 vendor/lib64/sensors.ssc.so
