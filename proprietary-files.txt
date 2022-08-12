@@ -1,4 +1,4 @@
-# Device proprietary files - from ginkgo MIUI V12.5.2.0.RCOMIXM Global Stable package, unless pinned
+# Device proprietary files - from ginkgo MIUI v12.5.5.0 China Stable package, unless pinned
 
 # ADSP - from LA.UM.9.11.r1-04500-NICOBAR.0
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
@@ -1518,7 +1518,7 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/liboemcrypto.so
+vendor/lib64/liboemcrypto.so|4bc107c69108c71b53d8a04c9f4d4e3f7ece18e7
 vendor/lib64/libwvhidl.so
 
 # DSP - from LA.UM.9.11.r1-04500-NICOBAR.0
