@@ -28,12 +28,18 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 ANCIENT_OFFICIAL ?= true
 ANCIENT_GAPPS ?= true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
+ANCIENT_BUILD_VARIANT := GApps
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+
+# Inherit some common Pixel stuff
 TARGET_INCLUDE_PIXEL_CHARGER := true
-TARGET_USES_BLUR := true
+FORCE_NEXUSLAUNCHER := true
 PIXEL_STUFF := true
 TARGET_SUPPORTS_QUICK_TAP := true
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+
+
+#Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier
 PRODUCT_NAME := ancient_ginkgo
