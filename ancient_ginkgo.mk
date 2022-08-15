@@ -28,7 +28,7 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 ANCIENT_OFFICIAL ?= true
 ANCIENT_GAPPS ?= true
 TARGET_BOOT_ANIMATION_RES := 1080
-ANCIENT_BUILD_VARIANT := GApps
+ANCIENT_GAPPS := true
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
 # Inherit some common Pixel stuff
