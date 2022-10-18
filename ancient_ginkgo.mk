@@ -33,7 +33,6 @@ $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
 # Inherit some common Pixel stuff
 TARGET_INCLUDE_PIXEL_CHARGER := true
-FORCE_NEXUSLAUNCHER := true
 PIXEL_STUFF := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
