@@ -191,7 +191,7 @@ vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
 vendor/lib/libxiaomiAI_sensor.so
 vendor/lib/mibokeh_660_opencl.bin
-vendor/lib/miwatermark.so
+vendor/lib/miwatermark.so|40963d57bc032c8c81222b571a1f2e811af0fc0e
 vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libseemore.so
@@ -1538,6 +1538,7 @@ vendor/lib64/com.fingerprints.extension@2.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|76cc3f4e68a67985a9456457916ee964e28e4dba
 vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so
 
 # FM - from LA.UM.9.11.r1-04500-NICOBAR.0
