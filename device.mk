@@ -422,6 +422,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-map.conf \
     $(LOCAL_PATH)/configs/thermal/thermal-engine-normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-normal.conf
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
