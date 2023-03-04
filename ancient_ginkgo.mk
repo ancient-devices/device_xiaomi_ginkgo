@@ -28,7 +28,6 @@ $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 ANCIENT_OFFICIAL ?= true
 ANCIENT_GAPPS ?= true
 TARGET_BOOT_ANIMATION_RES := 1080
-ANCIENT_GAPPS := true
 $(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
 # Inherit some common Pixel stuff
@@ -52,6 +51,6 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "google/redfin/redfin:13/TP1A.220624.014/8819323:user/release-keys"
+BUILD_FINGERPRINT := "google/cheetah/cheetah:13/TQ1A.230205.002/9471150:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="redfin-user 13 TP1A.220624.014/8819323 release-keys"
+    PRIVATE_BUILD_DESC="cheetah-user 13 TQ1A.230205.002/9471150 release-keys"
